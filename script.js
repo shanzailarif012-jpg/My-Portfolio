@@ -204,36 +204,14 @@ current = section.getAttribute("id");
 
 const menuBtn = document.querySelector(".menu-btn");
 const navLinks = document.querySelector(".nav-links");
-const menuIcon = menuBtn.querySelector("i");
+const menuIcon = document.querySelector(".menu-btn i");
 
-menuBtn.addEventListener("click", () => {
-
+menuBtn.addEventListener("click", function(){
+  
     navLinks.classList.toggle("show");
 
-    if (navLinks.classList.contains("show")) {
-
-        menuIcon.classList.remove("fa-bars");
-        menuIcon.classList.add("fa-xmark");
-
-    } else {
-
-        menuIcon.classList.remove("fa-xmark");
-        menuIcon.classList.add("fa-bars");
-
-    }
-
-});
-
-document.querySelectorAll(".nav-links a").forEach(link=>{
-
-    link.addEventListener("click",()=>{
-
-        navLinks.classList.remove("show");
-
-        menuIcon.classList.remove("fa-xmark");
-        menuIcon.classList.add("fa-bars");
-
-    });
+    menuIcon.classList.toggle("fa-bars");
+    menuIcon.classList.toggle("fa-xmark");
 
 });
 
@@ -256,7 +234,18 @@ btn.style.transform="scale(1)";
 });
 
 });
+document.querySelectorAll(".nav-links a").forEach(link => {
 
+    link.addEventListener("click", () => {
+
+        navLinks.classList.remove("show");
+
+        menuIcon.classList.remove("fa-xmark");
+        menuIcon.classList.add("fa-bars");
+
+    });
+
+});
 // ==============================
 // Welcome Message
 // ==============================
