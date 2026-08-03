@@ -180,9 +180,6 @@ observer.observe(item);
 // ==============================
 
 const sections = document.querySelectorAll("section");
-
-const navLinks = document.querySelectorAll(".nav-links a");
-
 window.addEventListener("scroll", () => {
 
 let current = "";
@@ -199,18 +196,6 @@ current = section.getAttribute("id");
 
 });
 
-navLinks.forEach(link => {
-
-link.classList.remove("active");
-
-if (link.getAttribute("href") === "#" + current) {
-
-link.classList.add("active");
-
-}
-
-});
-
 });
 
 // ==============================
@@ -218,12 +203,37 @@ link.classList.add("active");
 // ==============================
 
 const menuBtn = document.querySelector(".menu-btn");
+const navLinks = document.querySelector(".nav-links");
+const menuIcon = menuBtn.querySelector("i");
 
-const nav = document.querySelector(".nav-links");
+menuBtn.addEventListener("click", () => {
 
-menuBtn.addEventListener("click",()=>{
+    navLinks.classList.toggle("show");
 
-nav.classList.toggle("show");
+    if (navLinks.classList.contains("show")) {
+
+        menuIcon.classList.remove("fa-bars");
+        menuIcon.classList.add("fa-xmark");
+
+    } else {
+
+        menuIcon.classList.remove("fa-xmark");
+        menuIcon.classList.add("fa-bars");
+
+    }
+
+});
+
+document.querySelectorAll(".nav-links a").forEach(link=>{
+
+    link.addEventListener("click",()=>{
+
+        navLinks.classList.remove("show");
+
+        menuIcon.classList.remove("fa-xmark");
+        menuIcon.classList.add("fa-bars");
+
+    });
 
 });
 
