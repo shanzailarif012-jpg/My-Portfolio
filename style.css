@@ -362,6 +362,7 @@ Projects
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.08);
   transition: 0.4s;
+  margin: 56px 0px;
 }
 
 .project-card:hover {
