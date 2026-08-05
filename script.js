@@ -96,7 +96,7 @@ themeBtn.addEventListener("click", () => {
     headings.forEach(heading => {
       heading.style.color = "white"
     });
-    document.querySelector('.project-card h3').style.color = "white"
+    // document.querySelector('.project-card h3').style.color = "white"
 
 
   } else {
@@ -113,7 +113,7 @@ themeBtn.addEventListener("click", () => {
     headings.forEach(heading => {
       heading.style.color = "yellow"
     });
-    document.querySelector('.project-card h3').style.color = "green"
+    // document.querySelector('.project-card h3').style.color = "yellow"
   }
 
 });

@@ -373,6 +373,7 @@ Projects
 .project-card h3 {
   font-size: 30px;
   margin-bottom: 20px;
+  color: yellow;
 }
 
 .project-card p {
