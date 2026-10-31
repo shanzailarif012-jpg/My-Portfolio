@@ -255,3 +255,4 @@ window.addEventListener("load",()=>{
 console.log("Welcome Muhammad Shanzail 🚀");
 
 });
+
